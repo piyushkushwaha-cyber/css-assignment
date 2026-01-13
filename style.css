@@ -1,104 +1,261 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+}
+
+#p11{
+  color: #A8A8A8;
+}
+
+.personal-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px; 
+}
+
+#userForm{
+  margin-left: 600px;
+}
+
+#name{
+  display: flex;
   
-  body {
-    background: #f5f5f5;
-  }
+  height: 50px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+#email{
+  display: flex;
   
-  .page {
-    display: flex;
-    justify-content: center;
-    padding: 40px 10px;
-  }
-  
-  .card {
-    background: white;
-    width: 100%;
-    max-width: 500px;
-    padding: 30px;
-    border-radius: 10px;
+  height: 50px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+
+.age-phone {
+  display: flex;
+  gap: 20px; /* space between Age and Phone */
+
+}
+
+#age{
+  height: 50px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 5px;
+  padding-left: 10px;
+
+  width: 100%;
+  max-width: 260px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column; /* label on top, input below */
+}
+
+#telephone{
+  height: 50px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 5px;
+  padding-left: 10px;
+
+  width: 100%;
+  max-width: 500px;
+}
+
+#country{
+  width: 515px;
+  height: 50px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.gender-group {
+  display: flex;
+  gap: 16px;
+}
+
+.gender-group input[type="radio"] {
+  display: none;
+}
+
+.gender-group label {
+  padding: 12px ;
+  padding-right: 108px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+.gender-group input[type="radio"]:checked + label {
+  border-color: #000;
+  background-color: #f5f5f5;
+  font-weight: 500;
+}
+
+#address{
+  width: 510px;
+  padding-left: 10px;
+  border-radius: 5px;
+  padding-top: 10px;
+  border: 1.5px solid #e0e0e0;
+}
+
+button {
+  padding: 12px 40px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.reset {
+  background: white;
+  border: 1.5px solid #e0e0e0;
+}
+
+.submit {
+  background-color: black;
+  color: white;
+}
+
+.out{
+  margin-left: 600px;
+}
+
+.dropdown {
+  width: 320px;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.dropdown-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #333;
+}
+
+#toggle {
+  display: none;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: none;
+  padding: 1px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.arrow {
+  font-size: 14px;
+}
+
+/* Dropdown list */
+.dropdown-list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  margin-top: 6px;
+
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 10px 0;
+}
+
+
+#toggle:checked + .dropdown-header + .dropdown-list {
+  display: block;
+}
+
+.dropdown-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.dropdown-list label:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-list input {
+  accent-color: black;
+}
+
+#p-1{
+  font-size: 34px;
+}
+
+.personal-info, #userForm, .out {
+  margin-left: 0; 
+  width: 100%;
+  max-width: 600px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+select, 
+textarea,
+.dropdown {
+  width: 100% !important; 
+  max-width: 100%;
+  box-sizing: border-box; 
+}
+
+
+.gender-group label {
+  flex: 1; 
+  padding: 12px;
+  text-align: flex-start;
+  padding-right: 12px; 
+}
+
+.age-phone {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+}
+
+.field {
+  flex: 1 1 200px; 
+}
+
+#age, #telephone {
+  width: 100%;
+  max-width: none; 
+}
+
+@media (max-width: 480px) {
+  .gender-group {
+      flex-direction: column; 
   }
   
   h2 {
-    text-align: start;
-    margin-bottom: 5px;
+      text-align: center;
   }
-  
-  .subtitle {
-    text-align: start;
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 25px;
-  }
-  
-  label {
-    font-size: 14px;
-    margin-top: 15px;
-    display: block;
-  }
-  
-  input,
-  select,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-  }
-  
-  textarea {
-    height: 90px;
-    resize: none;
-  }
-  
-  .row {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .row div {
-    flex: 1;
-  }
-  
-  .gender,
-  .tech {
-    display: flex;
-    gap: 15px;
-    margin-top: 8px;
-    flex-wrap: wrap;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-  }
-  
-  button {
-    padding: 10px 22px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .reset {
-    background: #eee;
-  }
-  
-  .submit {
-    background: black;
-    color: white;
-  }
-  
-  @media (max-width: 600px) {
-    .row {
-      flex-direction: column;
-    }
-  }
-  
+}

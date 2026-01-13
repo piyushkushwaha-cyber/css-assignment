@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Info</title>
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info</title>
 </head>
 <body>
-
-  <div class="page">
-    <div class="card">
-
-      <h2>Personal Info</h2>
-      <p class="subtitle">Update your personal details here</p>
-
-      <form id="userForm">
-
-        <label>Name</label>
-        <input type="text" id="name" placeholder="Your name">
-
-        <label>Email Address</label>
-        <input type="email" id="email" placeholder="Your email address">
-
-        <div class="row">
-          <div>
-            <label>Age</label>
-            <input type="number" id="age" placeholder="Your age">
-          </div>
-
-          <div>
-            <label>Phone no.</label>
-            <input type="tel" id="telephone" placeholder="Your phone no.">
-          </div>
-        </div>
-
-        <label>Country</label>
-        <select id="country">
-          <option value="">Your country</option>
-          <option>India</option>
-          <option>USA</option>
-          <option>Japan</option>
-          <option>China</option>
-        </select>
-
-        <label>Gender</label>
-        <div class="gender">
-          <label><input type="radio" name="gender" value="Male"> Male</label>
-          <label><input type="radio" name="gender" value="Female"> Female</label>
-          <label><input type="radio" name="gender" value="Other"> Other</label>
-        </div>
-
-        
-        <label>Tech Stack</label>
-        <select id="techStack">
-        <option value="">Select tech stack</option>
-        <option value="HTML">HTML</option>
-        <option value="CSS">CSS</option>
-        <option value="JS">JavaScript</option>
-        <option value="React">React</option>
-        </select>
-
-
-
-        <label>Address</label>
-        <textarea id="address" placeholder="Your address"></textarea>
-
-        <div class="buttons">
-          <button type="reset" class="reset">Reset</button>
-          <button type="submit" class="submit">Submit</button>
-        </div>
-
-      </form>
-
+    <div class="personal-info">
+    <h2>Personal Info</h2>
+    <p id="p11">Update your personal details here</p>
     </div>
-  </div>
+    <form id="userForm">
 
-  <script src="script.js"></script>
-</body>
-</html>
+        <p>Name:</p>
+        <input type="text" id="name" placeholder="Your name"> 
+
+        <p>Email:</p>
+        <input type="email" id="email" placeholder="Your email address">
+        
+          <div class="age-phone">
+            <div class="field">
+              <p>Age:</p>
+              <input type="number" id="age" placeholder="Your age">
+            </div>
+          
+            <div class="field">
+              <p>Phone no.</p>
+              <input type="number" id="telephone" placeholder="Your phone no.">
+            </div>
+          </div>
+
+          <p>Country:</p>
+          <select id="country">
+            <option value="">Your country</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>Japan</option>
+            <option>China</option>
+          </select>
+          
+
+        <p>Gender:</p>
+        <div class="gender-group">
+            <input type="radio" name="gender" id="male" value="Male">
+            <label for="male">Male</label>
+          
+            <input type="radio" name="gender" id="female" value="Female">
+            <label for="female">Female</label>
+          
+            <input type="radio" name="gender" id="other" value="Other">
+            <label for="other">Other</label>
+          </div>
+        <br>
+
+     <div class="dropdown">
+        <label class="dropdown-label">Tech Stack</label>
+      
+        <input type="checkbox" id="toggle">
+        <label for="toggle" class="dropdown-header">
+          <p>Select tech stack</p>
+          <p class="arrow">⌄</p>
+        </label>
+      
+        <div class="dropdown-list">
+          <label><input type="checkbox" value="HTML"> HTML</label>
+          <label><input type="checkbox" value="CSS"> CSS</label>
+          <label><input type="checkbox" value="JS"> JavaScript</label>
+          <label><input type="checkbox" value="React"> React</label>
+          <label><input type="checkbox" value="Node.js"> Node.js</label>
+        </div>
+      </div>
+      
+        <p>Address:</p>
+        <textarea placeholder="Your address" id="address" rows="10"></textarea>
+        <br><br>
+    
+    
+        
+    
+        <button type="reset" class="reset">Reset</button>
+        <button type="submit" class="submit">Submit</button>
+    
+      </form>
+    
+      <br>
+    
+      <div id="output" class="out"></div>
+    
+      
+      <script src="script.js"></script>
+    
+    </body>
+    </html>
+
+
+
+
